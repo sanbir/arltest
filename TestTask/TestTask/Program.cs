@@ -39,15 +39,20 @@ namespace TestTask
             //    Console.WriteLine(s);
             //}
 
-            Guid guid = new Guid("f8306441-f248-4dfa-96c0-d3000000cb75");
+            Guid guid = new Guid("68306412-f248-4dfa-96c0-d3123456cb75");
 
             byte digit = 0;
-            int requiredNumberOfZeroes = x;
+            int requiredNumberOfZeroes = 31;
             int actualNumberOfZeroes = 0;
 
             byte[] bytes = guid.ToByteArray();
             for (int i = 0; i < bytes.Length; i++)
             {
+                if (actualNumberOfZeroes + 32 < requiredNumberOfZeroes + i)
+                {
+                    break;
+                }
+
                 uint temp = bytes[i];
 
                 if (temp >> 4 == 0)
@@ -79,8 +84,23 @@ namespace TestTask
 
 
             //Console.WriteLine(guid);
-            Console.ReadLine();
+            //Console.ReadLine();
         }
+
+        public static byte[] ToByteArray(Guid guid)
+        {
+            byte[] guidData = guid.ToByteArray();
+
+            if (BitConverter.IsLittleEndian)
+            {
+                Array.Reverse(guidData, 0, 4);
+                Array.Reverse(guidData, 4, 2);
+                Array.Reverse(guidData, 6, 2);
+            }
+
+            return guidData;
+        }
+
 
     }
 }
