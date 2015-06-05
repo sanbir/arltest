@@ -42,49 +42,129 @@ namespace TestTask
             Guid guid = new Guid("68306412-f248-4dfa-96c0-d3123456cb75");
 
             byte digit = 0;
+
             int requiredNumberOfZeroes = 31;
-            int actualNumberOfZeroes = 0;
 
-            byte[] bytes = guid.ToByteArray();
-            for (int i = 0; i < bytes.Length; i++)
-            {
-                if (actualNumberOfZeroes + 32 < requiredNumberOfZeroes + i)
-                {
-                    break;
-                }
-
-                uint temp = bytes[i];
-
-                if (temp >> 4 == 0)
-                {
-                    ++actualNumberOfZeroes;
-                    if (actualNumberOfZeroes == requiredNumberOfZeroes)
-                    {
-                        break;
-                    }
-                }
-                else
-                {
-                    actualNumberOfZeroes = 0;
-                }
-
-                if (temp << 28 == 0)
-                {
-                    ++actualNumberOfZeroes;
-                    if (actualNumberOfZeroes == requiredNumberOfZeroes)
-                    {
-                        break;
-                    }
-                }
-                else
-                {
-                    actualNumberOfZeroes = 0;
-                }
-            }
+            IsRequirementMet(guid, requiredNumberOfZeroes);
 
 
             //Console.WriteLine(guid);
             //Console.ReadLine();
+        }
+
+        private static bool IsRequirementMet(Guid guid, int requiredNumberOfZeroes)
+        {
+            int actualNumberOfZeroes = 0;
+            byte[] bytes = guid.ToByteArray();
+
+            if (BitConverter.IsLittleEndian)
+            {
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    if (actualNumberOfZeroes + 32 < requiredNumberOfZeroes + i)
+                    {
+                        return false;
+                    }
+
+                    uint temp;
+                    switch (i)
+                    {
+                        case 0:
+                            temp = bytes[3];
+                            break;
+                        case 1:
+                            temp = bytes[2];
+                            break;
+                        case 2:
+                            temp = bytes[1];
+                            break;
+                        case 3:
+                            temp = bytes[0];
+                            break;
+                        case 4:
+                            temp = bytes[5];
+                            break;
+                        case 5:
+                            temp = bytes[4];
+                            break;
+                        case 6:
+                            temp = bytes[7];
+                            break;
+                        case 7:
+                            temp = bytes[6];
+                            break;
+                        default:
+                            temp = bytes[i];
+                            break;
+                    }
+
+                    if (temp >> 4 == 0)
+                    {
+                        ++actualNumberOfZeroes;
+                        if (actualNumberOfZeroes == requiredNumberOfZeroes)
+                        {
+                            return true;
+                        }
+                    }
+                    else
+                    {
+                        actualNumberOfZeroes = 0;
+                    }
+
+                    if (temp << 28 == 0)
+                    {
+                        ++actualNumberOfZeroes;
+                        if (actualNumberOfZeroes == requiredNumberOfZeroes)
+                        {
+                            return true;
+                        }
+                    }
+                    else
+                    {
+                        actualNumberOfZeroes = 0;
+                    }
+                }
+            }
+            else
+            {
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    if (actualNumberOfZeroes + 32 < requiredNumberOfZeroes + i)
+                    {
+                        return false;
+                    }
+
+                    uint temp = bytes[i];
+
+                    if (temp >> 4 == 0)
+                    {
+                        ++actualNumberOfZeroes;
+                        if (actualNumberOfZeroes == requiredNumberOfZeroes)
+                        {
+                            return true;
+                        }
+                    }
+                    else
+                    {
+                        actualNumberOfZeroes = 0;
+                    }
+
+                    if (temp << 28 == 0)
+                    {
+                        ++actualNumberOfZeroes;
+                        if (actualNumberOfZeroes == requiredNumberOfZeroes)
+                        {
+                            return true;
+                        }
+                    }
+                    else
+                    {
+                        actualNumberOfZeroes = 0;
+                    }
+                }
+            }
+
+            return false;
         }
 
         public static byte[] ToByteArray(Guid guid)
