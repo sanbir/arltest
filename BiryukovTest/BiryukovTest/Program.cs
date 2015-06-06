@@ -12,9 +12,186 @@ namespace BiryukovTest
         {
             var list = new List<Guid>
             {
-                new Guid("9016cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
                 new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
-                new Guid("345920d2-2c6d-4561-905d-f7f7a1ce8b0b"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
+                                new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
+                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
             };
 
             var strings = list.Select(guid => guid.ToString("N")).ToList();
@@ -28,9 +205,12 @@ namespace BiryukovTest
             //Console.ReadLine();
 
             //string[] x = new[] { "101133110", "101233210", "102533010", "101331310" };
-            string longestCommon = strings.GetLongestCommonSubstring();  // "10"
+            var longestCommon = strings.GetLongestCommonSubstring();  // "10"
 
-            Console.WriteLine(longestCommon);
+            foreach (var longestString in longestCommon)
+            {
+                Console.WriteLine(longestString);
+            }
 
             Console.ReadLine();
         }
@@ -38,11 +218,11 @@ namespace BiryukovTest
 
     public static class Helper
     {
-        public static string GetLongestCommonSubstring(this IList<string> strings)
+        public static IEnumerable<string> GetLongestCommonSubstring(this IList<string> strings)
         {
             if (strings == null)
                 throw new ArgumentNullException("strings");
-            if (!strings.Any() || strings.Any(s => String.IsNullOrEmpty(s)))
+            if (!strings.Any() || strings.Any(String.IsNullOrEmpty))
                 throw new ArgumentException("None string must be empty", "strings");
 
             var commonSubstrings = new HashSet<string>(strings[0].GetSubstrings());
@@ -52,7 +232,9 @@ namespace BiryukovTest
                 if (commonSubstrings.Count == 0)
                     return null;
             }
-            return commonSubstrings.OrderByDescending(s => s.Length).First();
+
+            var longestCommonSubstrings = commonSubstrings.Where(s => s.Length == commonSubstrings.Max(m => m.Length));
+            return longestCommonSubstrings;
         }
 
         public static IEnumerable<string> GetSubstrings(this string str)
