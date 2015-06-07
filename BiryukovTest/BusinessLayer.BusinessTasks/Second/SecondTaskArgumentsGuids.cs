@@ -7,8 +7,8 @@ using BusinessLayer.Contracts.Second;
 
 namespace BusinessLayer.BusinessTasks.Second
 {
-    public class SecondTaskArgumentsStrings : ISecondTaskArguments<string>
+    public class SecondTaskArgumentsGuids : ISecondTaskArguments<Guid>
     {
-        public IList<string> Items { get; set; }
+        public IList<Guid> Items { get; set; }
     }
 }

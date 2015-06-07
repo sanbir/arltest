@@ -43,8 +43,9 @@
     <Compile Include="First\FirstTaskGuids.cs" />
     <Compile Include="First\FirstTaskResultGuids.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Second\SecondTask.cs" />
-    <Compile Include="Second\SecondTaskArgumentsStrings.cs" />
+    <Compile Include="Second\SecondTaskArgumentsGuids.cs" />
+    <Compile Include="Second\SecondTaskGuids.cs" />
+    <Compile Include="Second\SecondTaskHelper.cs" />
     <Compile Include="Second\SecondTaskResultStrings.cs" />
   </ItemGroup>
   <ItemGroup>

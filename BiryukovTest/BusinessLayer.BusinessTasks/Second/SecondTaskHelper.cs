@@ -3,54 +3,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using BusinessLayer.Contracts.Second;
 
 namespace BusinessLayer.BusinessTasks.Second
 {
-    public class SecondTask : ISecondTask<string, string>
+    internal static class SecondTaskHelper
     {
-        public ISecondTaskResult<string> Calculate(ISecondTaskArguments<string> arguments)
-        {
-            var result = new SecondTaskResultStrings
-            {
-                Items = arguments.Items,
-                MaxCommonStrings = GetLongestCommonSubstrings(arguments.Items)
-            };
-
-            return result;
-        }
-
-        private static IEnumerable<string> GetLongestCommonSubstrings(IList<string> strings)
+        public static IEnumerable<string> GetLongestCommonSubstrings(this IList<string> strings)
         {
             if (strings == null)
                 throw new ArgumentNullException("strings");
             if (!strings.Any() || strings.Any(String.IsNullOrEmpty))
                 throw new ArgumentException("None of the strings must be empty", "strings");
 
-            var commonSubstrings = GetCommonSubstrings(strings);
-            var longestCommonSubstrings = GetLongestCommonSubstrings(commonSubstrings);
-
-            return longestCommonSubstrings;
+            return strings.GetCommonSubstrings().GetLongestCommonSubstrings();
         }
 
-        private static IEnumerable<string> GetLongestCommonSubstrings(HashSet<string> commonSubstrings)
+        private static IEnumerable<string> GetLongestCommonSubstrings(this HashSet<string> commonSubstrings)
         {
             return commonSubstrings.Where(s => s.Length == commonSubstrings.Max(m => m.Length));
         }
 
-        private static HashSet<string> GetCommonSubstrings(IList<string> strings)
+        private static HashSet<string> GetCommonSubstrings(this IList<string> strings)
         {
-            var commonSubstrings = new HashSet<string>(GetSubstrings(strings[0]));
+            var commonSubstrings = new HashSet<string>(strings[0].GetSubstrings());
             foreach (string str in strings.Skip(1))
             {
-                commonSubstrings.IntersectWith(GetSubstrings(str));
+                commonSubstrings.IntersectWith(str.GetSubstrings());
                 if (commonSubstrings.Count == 0)
                     return commonSubstrings;
             }
             return commonSubstrings;
         }
 
-        public static IEnumerable<string> GetSubstrings(string str)
+        private static IEnumerable<string> GetSubstrings(this string str)
         {
             if (String.IsNullOrEmpty(str))
                 throw new ArgumentException("str must not be null or empty", "str");
