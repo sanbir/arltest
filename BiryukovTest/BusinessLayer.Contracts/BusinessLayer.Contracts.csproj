@@ -39,7 +39,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IArguments.cs" />
     <Compile Include="ICalculate.cs" />
     <Compile Include="BusinessTasks\IFirstTask.cs" />
     <Compile Include="BusinessTasks\ISecondTask.cs" />

@@ -33,7 +33,7 @@ namespace BiryukovTest
 
             var strings = list.Select(guid => guid.ToString("N")).ToList();
 
-            var longestCommon = strings.GetLongestCommonSubstring();
+            var longestCommon = strings.GetLongestCommonSubstrings();
 
             foreach (var longestString in longestCommon)
             {
@@ -46,22 +46,34 @@ namespace BiryukovTest
 
     public static class Helper
     {
-        public static IEnumerable<string> GetLongestCommonSubstring(this IList<string> strings)
+        public static IEnumerable<string> GetLongestCommonSubstrings(this IList<string> strings)
         {
             if (strings == null)
                 throw new ArgumentNullException("strings");
             if (!strings.Any() || strings.Any(String.IsNullOrEmpty))
                 throw new ArgumentException("None of the strings must be empty", "strings");
 
+            var commonSubstrings = GetCommonSubstrings(strings);
+            var longestCommonSubstrings = GetLongestCommonSubstrings(commonSubstrings);
+
+            return longestCommonSubstrings;
+        }
+
+        private static IEnumerable<string> GetLongestCommonSubstrings(HashSet<string> commonSubstrings)
+        {
+            return commonSubstrings.Where(s => s.Length == commonSubstrings.Max(m => m.Length));
+        }
+
+        private static HashSet<string> GetCommonSubstrings(IList<string> strings)
+        {
             var commonSubstrings = new HashSet<string>(strings[0].GetSubstrings());
             foreach (string str in strings.Skip(1))
             {
                 commonSubstrings.IntersectWith(str.GetSubstrings());
                 if (commonSubstrings.Count == 0)
-                    return null;
+                    return commonSubstrings;
             }
-
-            return commonSubstrings.Where(s => s.Length == commonSubstrings.Max(m => m.Length));
+            return commonSubstrings;
         }
 
         public static IEnumerable<string> GetSubstrings(this string str)
