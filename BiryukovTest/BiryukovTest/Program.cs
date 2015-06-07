@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -46,7 +47,7 @@ namespace BiryukovTest
                 new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
                 new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
                                 new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
-                new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
+                new Guid("564733fc-923d-44de-9297-d5399e7642f8"),
                 new Guid("345920d2-2c6d-5399-905d-f7f7a1ce8b0b"),
                                 new Guid("5399cbaa-a0d5-4032-8bf8-ff4920ddc157"),
                 new Guid("564733fc-920d-44de-9297-d5399e7642f8"),
@@ -205,12 +206,21 @@ namespace BiryukovTest
             //Console.ReadLine();
 
             //string[] x = new[] { "101133110", "101233210", "102533010", "101331310" };
+
+            Stopwatch sw=new Stopwatch();
+            sw.Start();
+
             var longestCommon = strings.GetLongestCommonSubstring();  // "10"
 
             foreach (var longestString in longestCommon)
             {
                 Console.WriteLine(longestString);
             }
+
+            sw.Stop();
+
+            Console.WriteLine();
+            Console.WriteLine(sw.ElapsedTicks);
 
             Console.ReadLine();
         }
@@ -223,7 +233,7 @@ namespace BiryukovTest
             if (strings == null)
                 throw new ArgumentNullException("strings");
             if (!strings.Any() || strings.Any(String.IsNullOrEmpty))
-                throw new ArgumentException("None string must be empty", "strings");
+                throw new ArgumentException("None of the strings must be empty", "strings");
 
             var commonSubstrings = new HashSet<string>(strings[0].GetSubstrings());
             foreach (string str in strings.Skip(1))
@@ -233,8 +243,7 @@ namespace BiryukovTest
                     return null;
             }
 
-            var longestCommonSubstrings = commonSubstrings.Where(s => s.Length == commonSubstrings.Max(m => m.Length));
-            return longestCommonSubstrings;
+            return commonSubstrings.Where(s => s.Length == commonSubstrings.Max(m => m.Length));
         }
 
         public static IEnumerable<string> GetSubstrings(this string str)
