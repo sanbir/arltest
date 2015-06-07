@@ -14,17 +14,11 @@ namespace BusinessLayer.BusinessTasks.First
 
             var result = new FirstTaskResultGuids
             {
-                Items = arguments.ItemsToReview.Where(guid => RequirementIsMet(guid, template))
+                Items = arguments.ItemsToReview.Where(guid => guid.RequirementIsMet(template))
             };
 
             return result;
         }
 
-        private static bool RequirementIsMet(Guid guid, string template)
-        {
-            var guidString = guid.ToString("N");
-            if (guidString.Contains(template)) return true;
-            return false;
-        }
     }
 }
