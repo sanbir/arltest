@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessLayer.Contracts;
 using BusinessLayer.Contracts.Second;
 
 namespace BusinessLayer.BusinessTasks.Second
 {
+    [Export(typeof(IBusinessTask))]
+    [PartCreationPolicy(CreationPolicy.NonShared)]
     public class SecondTaskGuids : ISecondTask<Guid, string>
     {
         public ISecondTaskResult<string> Calculate(int numberOfGuids)

@@ -40,11 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="First\IFirstTaskResult.cs" />
-    <Compile Include="First\ISequenceToReview.cs" />
-    <Compile Include="First\ITemplateToSearch.cs" />
+    <Compile Include="First\TemplateToSearch.cs" />
     <Compile Include="IBusinessTask.cs" />
     <Compile Include="First\IFirstTask.cs" />
     <Compile Include="IBusinessTaskArguments.cs" />
+    <Compile Include="IBusinessTaskFactory.cs" />
     <Compile Include="IBusinessTaskResult.cs" />
     <Compile Include="Second\ISecondTask.cs" />
     <Compile Include="First\IFirstTaskArguments.cs" />

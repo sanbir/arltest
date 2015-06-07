@@ -19,10 +19,5 @@ namespace BusinessLayer.BusinessTasks.First
         {
             return item.ToString("N").RequirementIsMet(template);
         }
-
-        public static string GetTemplate(this ITemplateToSearch template)
-        {
-            return new String(template.Symbol, template.NumberOfSymbols);
-        }
     }
 }

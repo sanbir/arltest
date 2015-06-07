@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.Composition;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,9 @@ namespace BiryukovTest
 {
     class Program
     {
+        [Import]
+        IBusinessTask _businessTaskFactory;
+
         static void Main(string[] args)
         {
             var typeOfTask = int.Parse(args[0]);
@@ -19,6 +23,8 @@ namespace BiryukovTest
                 case 1:
                     var amountOfDigits = int.Parse(args[1]);
                     var desiredAmountOfResults = int.Parse(args[2]);
+
+                    
                     break;
                 case 2:
                     break;
@@ -41,48 +47,6 @@ namespace BiryukovTest
             }
 
             Console.ReadLine();
-        }
-    }
-
-    public static class Helper
-    {
-        public static IEnumerable<string> GetLongestCommonSubstrings(this IList<string> strings)
-        {
-            if (strings == null)
-                throw new ArgumentNullException("strings");
-            if (!strings.Any() || strings.Any(String.IsNullOrEmpty))
-                throw new ArgumentException("None of the strings must be empty", "strings");
-
-            var commonSubstrings = GetCommonSubstrings(strings);
-            var longestCommonSubstrings = commonSubstrings.Where(s => s.Length == commonSubstrings.Max(m => m.Length));
-
-            return longestCommonSubstrings;
-        }
-
-        private static HashSet<string> GetCommonSubstrings(IList<string> strings)
-        {
-            var commonSubstrings = new HashSet<string>(strings[0].GetSubstrings());
-            foreach (string str in strings.Skip(1))
-            {
-                commonSubstrings.IntersectWith(str.GetSubstrings());
-                if (commonSubstrings.Count == 0)
-                    return commonSubstrings;
-            }
-            return commonSubstrings;
-        }
-
-        public static IEnumerable<string> GetSubstrings(this string str)
-        {
-            if (String.IsNullOrEmpty(str))
-                throw new ArgumentException("str must not be null or empty", "str");
-
-            for (int c = 0; c < str.Length - 1; c++)
-            {
-                for (int cc = 1; c + cc <= str.Length; cc++)
-                {
-                    yield return str.Substring(c, cc);
-                }
-            }
         }
     }
 }
