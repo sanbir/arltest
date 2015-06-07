@@ -8,11 +8,16 @@ namespace BusinessLayer.BusinessTasks.First
 {
     public class FirstTaskGuids : IFirstTask<Guid, char>
     {
-        public IEnumerable<Guid> Calculate(IFirstTaskArguments<Guid, char> arguments)
+        public IFirstTaskResult<Guid> Calculate(IFirstTaskArguments<Guid, char> arguments)
         {
             var template = new String(arguments.Symbol, arguments.NumberOfSymbols);
 
-            return arguments.ItemsToReview.Where(guid => RequirementIsMet(guid, template));
+            var result = new FirstTaskResultGuids
+            {
+                Items = arguments.ItemsToReview.Where(guid => RequirementIsMet(guid, template))
+            };
+
+            return result;
         }
 
         private static bool RequirementIsMet(Guid guid, string template)
