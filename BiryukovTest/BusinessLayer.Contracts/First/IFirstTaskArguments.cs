@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace BusinessLayer.Contracts.First
 {
-    public interface IFirstTaskArguments<TItemToReview, TSymbol>
+    public interface IFirstTaskArguments<TItemToReview, TSymbol> : IBusinessTaskArguments
     {
         int NumberOfItemsToReview { get; set; }
         IEnumerable<TItemToReview> ItemsToReview { get; set; }
