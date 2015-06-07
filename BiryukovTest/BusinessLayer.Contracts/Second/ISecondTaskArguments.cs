@@ -2,8 +2,8 @@
 
 namespace BusinessLayer.Contracts.Second
 {
-    public interface ISecondTaskArguments<TItem> : IBusinessTaskArguments
+    public interface ISecondTaskArguments<TInputItem> : IBusinessTaskArguments
     {
-        IList<TItem> Items { get; set; } 
+        IList<TInputItem> Items { get; set; } 
     }
 }

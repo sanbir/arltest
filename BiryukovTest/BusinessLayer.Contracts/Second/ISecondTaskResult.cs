@@ -2,9 +2,9 @@
 
 namespace BusinessLayer.Contracts.Second
 {
-    public interface ISecondTaskResult<TItem> : IBusinessTaskResult
+    public interface ISecondTaskResult<TOutputItem> : IBusinessTaskResult
     {
-        IEnumerable<TItem> Items { get; set; }
+        IEnumerable<TOutputItem> Items { get; set; }
         IEnumerable<string> MaxCommonStrings { get; set; }
     }
 }

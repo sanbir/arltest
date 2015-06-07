@@ -43,6 +43,9 @@
     <Compile Include="First\FirstTaskGuids.cs" />
     <Compile Include="First\FirstTaskResultGuids.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Second\SecondTask.cs" />
+    <Compile Include="Second\SecondTaskArgumentsStrings.cs" />
+    <Compile Include="Second\SecondTaskResultStrings.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLayer.Contracts\BusinessLayer.Contracts.csproj">
@@ -50,9 +53,7 @@
       <Name>BusinessLayer.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Second\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
