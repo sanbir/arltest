@@ -4,10 +4,8 @@ namespace BusinessLayer.Contracts.First
 {
     public interface IFirstTaskArguments<TItemToReview, TSymbol> : IBusinessTaskArguments
     {
-        int NumberOfItemsToReview { get; set; }
-        IEnumerable<TItemToReview> ItemsToReview { get; set; }
+        ITemplateToSearch TemplateToSearch { get; set; }
 
-        int NumberOfSymbols { get; set; }
-        TSymbol Symbol { get; set; }
+        ISequenceToReview<TItemToReview> SequenceToReview { get; set; }
     }
 }

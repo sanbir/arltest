@@ -10,11 +10,11 @@ namespace BusinessLayer.BusinessTasks.First
     {
         public IFirstTaskResult<Guid> Calculate(IFirstTaskArguments<Guid, char> arguments)
         {
-            var template = new String(arguments.Symbol, arguments.NumberOfSymbols);
+            var template = arguments.TemplateToSearch.GetTemplate();
 
             var result = new FirstTaskResultGuids
             {
-                Items = arguments.ItemsToReview.Where(guid => guid.RequirementIsMet(template))
+                Items = arguments.SequenceToReview.ItemsToReview.Where(guid => guid.RequirementIsMet(template))
             };
 
             return result;

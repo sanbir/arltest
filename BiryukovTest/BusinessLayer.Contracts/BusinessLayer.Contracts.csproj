@@ -40,6 +40,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="First\IFirstTaskResult.cs" />
+    <Compile Include="First\ISequenceToReview.cs" />
+    <Compile Include="First\ITemplateToSearch.cs" />
     <Compile Include="IBusinessTask.cs" />
     <Compile Include="First\IFirstTask.cs" />
     <Compile Include="IBusinessTaskArguments.cs" />
