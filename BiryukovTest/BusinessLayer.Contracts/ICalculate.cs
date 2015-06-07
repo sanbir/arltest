@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using BusinessLayer.Models;
-
-namespace BusinessLayer.Contracts
+﻿namespace BusinessLayer.Contracts
 {
-
+    public interface ICalculate<in TTaskArguments, out TTaskResult>
+    {
+        TTaskResult Calculate(TTaskArguments arguments);
+    }
 }

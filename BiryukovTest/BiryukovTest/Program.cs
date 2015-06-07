@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessLayer.Contracts;
 
 namespace BiryukovTest
 {
@@ -11,14 +12,16 @@ namespace BiryukovTest
     {
         static void Main(string[] args)
         {
-            var ff = int.Parse(args[0]);
+            var typeOfTask = int.Parse(args[0]);
 
-
-
-            switch (ff)
+            switch (typeOfTask)
             {
                 case 1:
-
+                    var amountOfDigits = int.Parse(args[1]);
+                    var desiredAmountOfResults = int.Parse(args[2]);
+                    break;
+                case 2:
+                    break;
             }
 
             var list = new List<Guid>

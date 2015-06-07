@@ -39,22 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessTasks\IFirstTypeTask.cs" />
-    <Compile Include="BusinessTasks\ISecondTypeTask.cs" />
     <Compile Include="IArguments.cs" />
-    <Compile Include="IBusinessTask.cs" />
-    <Compile Include="IBusinessTaskFactory.cs" />
     <Compile Include="ICalculate.cs" />
-    <Compile Include="ICalculate_2.cs" />
-    <Compile Include="IResult.cs" />
+    <Compile Include="BusinessTasks\IFirstTask.cs" />
+    <Compile Include="BusinessTasks\ISecondTask.cs" />
+    <Compile Include="IFirstTaskArguments.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BusinessLayer.Models\BusinessLayer.Models.csproj">
-      <Project>{FE868608-D460-4071-BFB4-04565BED4171}</Project>
-      <Name>BusinessLayer.Models</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer.BusinessTasks
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{AA9D92DE-BEFC-4491-8DA6-EBD51D64A510}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer.Models", "BusinessLayer.Models\BusinessLayer.Models.csproj", "{FE868608-D460-4071-BFB4-04565BED4171}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,10 +31,6 @@ Global
 		{4827D233-7EBD-424B-9A07-F811CA4ABF8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4827D233-7EBD-424B-9A07-F811CA4ABF8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4827D233-7EBD-424B-9A07-F811CA4ABF8D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FE868608-D460-4071-BFB4-04565BED4171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FE868608-D460-4071-BFB4-04565BED4171}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FE868608-D460-4071-BFB4-04565BED4171}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FE868608-D460-4071-BFB4-04565BED4171}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -44,6 +38,5 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6AE213E5-C265-475F-BE62-CAD984A20D96} = {5F701729-D890-4C86-A333-3C483E2DA959}
 		{4827D233-7EBD-424B-9A07-F811CA4ABF8D} = {5F701729-D890-4C86-A333-3C483E2DA959}
-		{FE868608-D460-4071-BFB4-04565BED4171} = {5F701729-D890-4C86-A333-3C483E2DA959}
 	EndGlobalSection
 EndGlobal
