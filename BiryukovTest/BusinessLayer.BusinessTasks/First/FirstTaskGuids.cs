@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using BusinessLayer.Contracts;
-using BusinessLayer.Contracts.BusinessTasks;
+using BusinessLayer.Contracts.First;
 
 namespace BusinessLayer.BusinessTasks.First
 {
@@ -12,10 +12,10 @@ namespace BusinessLayer.BusinessTasks.First
         {
             var template = new String(arguments.Symbol, arguments.NumberOfSymbols);
 
-            return arguments.ItemsToReview.Where(guid => IsRequirementMet(guid, template));
+            return arguments.ItemsToReview.Where(guid => RequirementIsMet(guid, template));
         }
 
-        private static bool IsRequirementMet(Guid guid, string template)
+        private static bool RequirementIsMet(Guid guid, string template)
         {
             var guidString = guid.ToString("N");
             if (guidString.Contains(template)) return true;

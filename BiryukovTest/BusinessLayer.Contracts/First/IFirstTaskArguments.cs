@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace BusinessLayer.Contracts
+namespace BusinessLayer.Contracts.First
 {
     public interface IFirstTaskArguments<TItemToReview, TSymbol>
     {

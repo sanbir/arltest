@@ -39,10 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ICalculate.cs" />
-    <Compile Include="BusinessTasks\IFirstTask.cs" />
-    <Compile Include="BusinessTasks\ISecondTask.cs" />
-    <Compile Include="IFirstTaskArguments.cs" />
+    <Compile Include="IBusinessTask.cs" />
+    <Compile Include="First\IFirstTask.cs" />
+    <Compile Include="Second\ISecondTask.cs" />
+    <Compile Include="First\IFirstTaskArguments.cs" />
+    <Compile Include="Second\ISecondTaskArguments.cs" />
+    <Compile Include="Second\ISecondTaskResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
