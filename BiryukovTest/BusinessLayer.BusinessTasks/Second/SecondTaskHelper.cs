@@ -25,19 +25,27 @@ namespace BusinessLayer.BusinessTasks.Second
 
         private static HashSet<string> GetCommonSubstrings(this IList<string> strings, int minNumberOfStringsToCount)
         {
-            var commonSubstrings = new HashSet<string>(strings[0].GetSubstrings());
+            var commonSubstrings = new HashSet<KeyValuePair<string, int>>(strings[0].GetSubstrings());
             foreach (string str in strings.Skip(1))
             {
-                commonSubstrings.IntersectWith(str.GetSubstrings());
-                if (commonSubstrings.Count == 0)
-                    return commonSubstrings;
+                var temp = new HashSet<KeyValuePair<string, int>>(commonSubstrings);
+                temp.IntersectWith(str.GetSubstrings());
+
+                foreach (KeyValuePair<string, int> s in temp)
+                {
+                    if(commonSubstrings)
+                    commonSubstrings
+                }
+
+                //if (commonSubstrings.Count == 0)
+                //    return commonSubstrings;
             }
             return commonSubstrings;
         }
 
 
 
-        private static IEnumerable<string> GetSubstrings(this string str)
+        private static IEnumerable<KeyValuePair<string, int>> GetSubstrings(this string str)
         {
             if (String.IsNullOrEmpty(str))
                 throw new ArgumentException("str must not be null or empty", "str");
@@ -46,7 +54,7 @@ namespace BusinessLayer.BusinessTasks.Second
             {
                 for (int cc = 1; c + cc <= str.Length; cc++)
                 {
-                    yield return str.Substring(c, cc);
+                    yield return new KeyValuePair<string, int> (str.Substring(c, cc), 0);
                 }
             }
         }
