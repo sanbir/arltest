@@ -15,12 +15,32 @@ namespace BusinessLayer.BusinessTasks.First
         {
             var template = arguments.TemplateToSearch.GetTemplate();
 
+            var resultList = new List<Guid>();
+            int currentNumberOfItems = 0;
+            foreach (var guid in GetItemsToReview())
+            {
+                if (guid.RequirementIsMet(template))
+                {
+                    ++currentNumberOfItems;
+                    resultList.Add(guid);
+                }
+                if (currentNumberOfItems == arguments.NumberOfItemsToReview) break;
+            }
+
             var result = new FirstTaskResultGuids
             {
-                Items = arguments.ItemsToReview.Where(guid => guid.RequirementIsMet(template))
+                Items = resultList
             };
 
             return result;
+        }
+
+        private static IEnumerable<Guid> GetItemsToReview()
+        {
+            while (true)
+            {
+                yield return Guid.NewGuid();
+            }
         }
     }
 }

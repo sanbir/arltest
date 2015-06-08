@@ -6,7 +6,7 @@ namespace BusinessLayer.Contracts.First
     {
         TemplateToSearch TemplateToSearch { get; set; }
 
-        IEnumerable<TItemToReview> ItemsToReview { get; set; }
+        int NumberOfItemsToReview { get; set; }
 
         void SetFirstTaskArguments(int numberOfSymbols, TSymbol symbol, int numberOfItemsToReview);
     }

@@ -11,7 +11,8 @@ namespace BusinessLayer.BusinessTasks.First
     public class FirstTaskArgumentsGuidChar : IFirstTaskArguments<Guid, char>
     {
         public TemplateToSearch TemplateToSearch { get; set; }
-        public IEnumerable<Guid> ItemsToReview { get; set; }
+        public int NumberOfItemsToReview { get; set; }
+
         public void SetFirstTaskArguments(int numberOfSymbols, char symbol, int numberOfItemsToReview)
         {
             TemplateToSearch = new TemplateToSearch(numberOfSymbols, symbol);
@@ -21,7 +22,8 @@ namespace BusinessLayer.BusinessTasks.First
             {
                 itemsToReview.Add(Guid.NewGuid());
             }
-            ItemsToReview = itemsToReview;
+
+            NumberOfItemsToReview = numberOfItemsToReview;
         }
 
     }
