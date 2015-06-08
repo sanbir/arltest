@@ -1,6 +1,6 @@
-namespace BiryukovTest
+namespace BiryukovTest.Input
 {
-    struct FirstTaskInput
+    struct FirstTaskInput : ITaskInput
     {
         public int AmountOfDigits;
         public int DesiredAmountOfResults;
