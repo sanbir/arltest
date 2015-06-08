@@ -68,7 +68,7 @@ namespace BiryukovTest.TaskHelpers
         public IBusinessTaskResult RunTask(CompositionContainer container, ITaskInput taskInput)
         {
             FirstTaskInput firstTaskInput = (FirstTaskInput)taskInput;
-            var firstTaskArguments = container.GetExportedValue<IFirstTaskArguments<Guid, char>>();
+            var firstTaskArguments = container.GetExportedValue<IFirstTaskArguments<char>>();
             firstTaskArguments.SetFirstTaskArguments(firstTaskInput.AmountOfDigits, '0', firstTaskInput.DesiredAmountOfResults);
             var firstTaskGuids = container.GetExportedValue<IFirstTask<Guid, char>>();
             var firstTaskresult = firstTaskGuids.Calculate(firstTaskArguments);

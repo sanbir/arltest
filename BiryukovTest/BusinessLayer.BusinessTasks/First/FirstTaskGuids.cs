@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.Composition;
-using System.Linq;
-using BusinessLayer.Contracts;
 using BusinessLayer.Contracts.First;
 
 namespace BusinessLayer.BusinessTasks.First
@@ -11,7 +9,7 @@ namespace BusinessLayer.BusinessTasks.First
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public class FirstTaskGuids : IFirstTask<Guid, char>
     {
-        public IFirstTaskResult<Guid> Calculate(IFirstTaskArguments<Guid, char> arguments)
+        public IFirstTaskResult<Guid> Calculate(IFirstTaskArguments<char> arguments)
         {
             var template = arguments.TemplateToSearch.GetTemplate();
 

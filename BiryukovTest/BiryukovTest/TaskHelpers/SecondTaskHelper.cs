@@ -52,7 +52,7 @@ namespace BiryukovTest.TaskHelpers
         public IBusinessTaskResult RunTask(CompositionContainer container, ITaskInput taskInput)
         {
             var secondTaskGuids = container.GetExportedValue<ISecondTask<Guid, string>>();
-            var secondTaskResult = secondTaskGuids.Calculate(((SecondTaskInput)taskInput).NumberOfGuids, 3);
+            var secondTaskResult = secondTaskGuids.Calculate(((SecondTaskInput)taskInput).NumberOfGuids);
             return secondTaskResult;
         }
     }

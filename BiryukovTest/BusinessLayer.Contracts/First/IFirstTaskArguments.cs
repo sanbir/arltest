@@ -1,8 +1,6 @@
-using System.Collections.Generic;
-
 namespace BusinessLayer.Contracts.First
 {
-    public interface IFirstTaskArguments<TItemToReview, TSymbol> : IBusinessTaskArguments
+    public interface IFirstTaskArguments<in TSymbol> : IBusinessTaskArguments
     {
         TemplateToSearch TemplateToSearch { get; set; }
 

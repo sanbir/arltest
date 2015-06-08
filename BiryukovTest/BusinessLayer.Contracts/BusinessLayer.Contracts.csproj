@@ -45,7 +45,6 @@
     <Compile Include="IBusinessTask.cs" />
     <Compile Include="First\IFirstTask.cs" />
     <Compile Include="IBusinessTaskArguments.cs" />
-    <Compile Include="IBusinessTaskFactory.cs" />
     <Compile Include="IBusinessTaskResult.cs" />
     <Compile Include="Second\ISecondTask.cs" />
     <Compile Include="First\IFirstTaskArguments.cs" />

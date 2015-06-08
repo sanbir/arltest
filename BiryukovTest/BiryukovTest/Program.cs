@@ -1,9 +1,6 @@
 ﻿using System;
-using System.ComponentModel.Composition.Hosting;
 using System.Linq;
 using BiryukovTest.TaskHelpers;
-using BusinessLayer.Contracts.First;
-using BusinessLayer.Contracts.Second;
 
 namespace BiryukovTest
 {
