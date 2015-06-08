@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer.BusinessTasks
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{AA9D92DE-BEFC-4491-8DA6-EBD51D64A510}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ServiceLayer", "ServiceLayer", "{81A9ACD0-4A8A-47D0-AC45-A54CE8FB8014}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer.SimpleService", "ServiceLayer.SimpleService\ServiceLayer.SimpleService.csproj", "{002B989A-AB80-4843-8E2C-194C4264B56F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +35,10 @@ Global
 		{4827D233-7EBD-424B-9A07-F811CA4ABF8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4827D233-7EBD-424B-9A07-F811CA4ABF8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4827D233-7EBD-424B-9A07-F811CA4ABF8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{002B989A-AB80-4843-8E2C-194C4264B56F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{002B989A-AB80-4843-8E2C-194C4264B56F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{002B989A-AB80-4843-8E2C-194C4264B56F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{002B989A-AB80-4843-8E2C-194C4264B56F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,5 +46,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{6AE213E5-C265-475F-BE62-CAD984A20D96} = {5F701729-D890-4C86-A333-3C483E2DA959}
 		{4827D233-7EBD-424B-9A07-F811CA4ABF8D} = {5F701729-D890-4C86-A333-3C483E2DA959}
+		{002B989A-AB80-4843-8E2C-194C4264B56F} = {81A9ACD0-4A8A-47D0-AC45-A54CE8FB8014}
 	EndGlobalSection
 EndGlobal
