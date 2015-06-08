@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BiryukovTest", "BiryukovTest\BiryukovTest.csproj", "{731EF448-1F33-47CD-B6F5-3C886DCC1797}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4827D233-7EBD-424B-9A07-F811CA4ABF8D} = {4827D233-7EBD-424B-9A07-F811CA4ABF8D}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BusinessLayer", "BusinessLayer", "{5F701729-D890-4C86-A333-3C483E2DA959}"
 EndProject
