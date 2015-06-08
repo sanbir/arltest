@@ -11,6 +11,7 @@ using BusinessLayer.BusinessTasks.First;
 using BusinessLayer.BusinessTasks.Second;
 using BusinessLayer.Contracts;
 using BusinessLayer.Contracts.First;
+using BusinessLayer.Contracts.Second;
 
 namespace BiryukovTest
 {
@@ -20,13 +21,13 @@ namespace BiryukovTest
         {
             CompositionContainer container = new BootStrap().GetContainer();
 
-            var typeOfTask = int.Parse(args[0]);
+            var typeOfTask = 2;// int.Parse(args[0]);
 
             switch (typeOfTask)
             {
                 case 1:
-                    var amountOfDigits = 3;// int.Parse(args[1]);
-                    var desiredAmountOfResults = 1;// int.Parse(args[2]);
+                    var amountOfDigits = int.Parse(args[1]);
+                    var desiredAmountOfResults = int.Parse(args[2]);
 
                     var aa = container.GetExportedValue<IFirstTaskArguments<Guid, char>>();
                     aa.SetFirstTaskArguments(amountOfDigits, '0', desiredAmountOfResults);
@@ -40,6 +41,19 @@ namespace BiryukovTest
 
                     break;
                 case 2:
+                    var numberOfGuids = int.Parse(args[1]);
+
+                    var secondTaskGuids = container.GetExportedValue<ISecondTask<Guid, string>>();
+                    var secondTaskResult = secondTaskGuids.Calculate(numberOfGuids);
+
+                    foreach (var item in secondTaskResult.Items)
+                    {
+                        Console.WriteLine(item);
+                    }
+                    foreach (var maxCommonString in secondTaskResult.MaxCommonStrings)
+                    {
+                        Console.WriteLine(maxCommonString);
+                    }
                     break;
             }
 
