@@ -1,7 +1,4 @@
 ﻿using System;
-using System.ComponentModel.Composition.Hosting;
-using System.Configuration;
-using System.Reflection;
 using BusinessLayer.Contracts.First;
 using BusinessLayer.Contracts.Second;
 
@@ -11,39 +8,34 @@ namespace BiryukovTest
     {
         static void Main(string[] args)
         {
-            string businessLayerFolder = ConfigurationManager.AppSettings["BusinessLayerFolder"];
-            var catalog = new AggregateCatalog();
-            catalog.Catalogs.Add(
-                new AssemblyCatalog(
-                    Assembly.LoadFile(Environment.CurrentDirectory.Replace(@"\BiryukovTest\bin\Debug", string.Empty)
-                                      + businessLayerFolder
-                                      + "/BusinessLayer.BusinessTasks.dll")));
-            CompositionContainer container = new CompositionContainer(catalog);
+            var container = MefLoader.GetMefContainer();
 
-            var typeOfTask = 2;// int.Parse(args[0]);
+            var typeOfTask = int.Parse(args[0]);
 
             switch (typeOfTask)
             {
                 case 1:
-                    var amountOfDigits = int.Parse(args[1]);
-                    var desiredAmountOfResults = int.Parse(args[2]);
+                    FirstTaskInput firstTaskInput;
+                    firstTaskInput.AmountOfDigits = int.Parse(args[1]);
+                    firstTaskInput.DesiredAmountOfResults = int.Parse(args[2]);
 
-                    var aa = container.GetExportedValue<IFirstTaskArguments<Guid, char>>();
-                    aa.SetFirstTaskArguments(amountOfDigits, '0', desiredAmountOfResults);
+                    var firstTaskArguments = container.GetExportedValue<IFirstTaskArguments<Guid, char>>();
+                    firstTaskArguments.SetFirstTaskArguments(firstTaskInput.AmountOfDigits, '0', firstTaskInput.DesiredAmountOfResults);
                     var firstTaskGuids = container.GetExportedValue<IFirstTask<Guid, char>>();
-                    var result = firstTaskGuids.Calculate(aa);
+                    var firstTaskresult = firstTaskGuids.Calculate(firstTaskArguments);
 
-                    foreach (var item in result.Items)
+                    foreach (var item in firstTaskresult.Items)
                     {
                         Console.WriteLine(item);
                     }
 
                     break;
                 case 2:
-                    var numberOfGuids = int.Parse(args[1]);
+                    SecondTaskInput secondTaskInput;
+                    secondTaskInput.NumberOfGuids = int.Parse(args[1]);
 
                     var secondTaskGuids = container.GetExportedValue<ISecondTask<Guid, string>>();
-                    var secondTaskResult = secondTaskGuids.Calculate(numberOfGuids, 3);
+                    var secondTaskResult = secondTaskGuids.Calculate(secondTaskInput.NumberOfGuids, 3);
 
                     foreach (var item in secondTaskResult.Items)
                     {
@@ -58,6 +50,6 @@ namespace BiryukovTest
 
             Console.ReadLine();
         }
-    }
 
+    }
 }

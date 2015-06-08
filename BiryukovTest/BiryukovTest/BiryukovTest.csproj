@@ -58,8 +58,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FirstTaskInput.cs" />
+    <Compile Include="MefLoader.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecondTaskInput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
