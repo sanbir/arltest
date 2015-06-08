@@ -7,7 +7,7 @@ using BusinessLayer.Contracts.First;
 
 namespace BusinessLayer.BusinessTasks.First
 {
-    [Export(typeof(IBusinessTask))]
+    [Export(typeof(IFirstTask<Guid, char>))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public class FirstTaskGuids : IFirstTask<Guid, char>
     {

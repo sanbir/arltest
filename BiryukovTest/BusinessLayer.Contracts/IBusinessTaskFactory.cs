@@ -1,4 +1,6 @@
-﻿namespace BusinessLayer.Contracts
+﻿using System.ComponentModel.Composition.Hosting;
+
+namespace BusinessLayer.Contracts
 {
     public interface IBusinessTaskFactory
     {

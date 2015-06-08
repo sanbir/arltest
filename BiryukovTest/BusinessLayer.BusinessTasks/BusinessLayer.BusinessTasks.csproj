@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessTaskFactory.cs" />
     <Compile Include="First\FirstTaskArgumentsGuidChar.cs" />
     <Compile Include="First\FirstTaskGuids.cs" />
     <Compile Include="First\FirstTaskHelper.cs" />

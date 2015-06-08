@@ -9,7 +9,7 @@ using BusinessLayer.Contracts.Second;
 
 namespace BusinessLayer.BusinessTasks.Second
 {
-    [Export(typeof(IBusinessTask))]
+    [Export(typeof(ISecondTask<Guid, string>))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public class SecondTaskGuids : ISecondTask<Guid, string>
     {
