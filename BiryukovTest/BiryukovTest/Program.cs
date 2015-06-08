@@ -29,7 +29,10 @@ namespace BiryukovTest
                     var amountOfDigits = int.Parse(args[1]);
                     var desiredAmountOfResults = int.Parse(args[2]);
 
-                    var aa = container.GetExportedValue<IFirstTask<Guid, char>>();
+                    var aa = container.GetExportedValue<IFirstTaskArguments<Guid, char>>();
+                    aa.SetFirstTaskArguments(amountOfDigits, '0', desiredAmountOfResults);
+                    var firstTaskGuids = container.GetExportedValue<IFirstTask<Guid, char>>();
+                    
                     break;
                 case 2:
                     break;
