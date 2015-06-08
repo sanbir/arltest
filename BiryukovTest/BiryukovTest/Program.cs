@@ -44,7 +44,7 @@ namespace BiryukovTest
                     var numberOfGuids = int.Parse(args[1]);
 
                     var secondTaskGuids = container.GetExportedValue<ISecondTask<Guid, string>>();
-                    var secondTaskResult = secondTaskGuids.Calculate(numberOfGuids);
+                    var secondTaskResult = secondTaskGuids.Calculate(numberOfGuids, 3);
 
                     foreach (var item in secondTaskResult.Items)
                     {
