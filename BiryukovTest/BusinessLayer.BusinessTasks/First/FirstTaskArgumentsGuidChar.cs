@@ -16,13 +16,6 @@ namespace BusinessLayer.BusinessTasks.First
         public void SetFirstTaskArguments(int numberOfSymbols, char symbol, int numberOfItemsToReview)
         {
             TemplateToSearch = new TemplateToSearch(numberOfSymbols, symbol);
-
-            var itemsToReview = new List<Guid>(numberOfItemsToReview);
-            for (int i = 0; i < numberOfItemsToReview; i++)
-            {
-                itemsToReview.Add(Guid.NewGuid());
-            }
-
             NumberOfItemsToReview = numberOfItemsToReview;
         }
 

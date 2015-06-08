@@ -49,6 +49,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -64,10 +65,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLayer.BusinessTasks\BusinessLayer.BusinessTasks.csproj">
-      <Project>{4827D233-7EBD-424B-9A07-F811CA4ABF8D}</Project>
-      <Name>BusinessLayer.BusinessTasks</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BusinessLayer.Contracts\BusinessLayer.Contracts.csproj">
       <Project>{6AE213E5-C265-475F-BE62-CAD984A20D96}</Project>
       <Name>BusinessLayer.Contracts</Name>

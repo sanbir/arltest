@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.Composition;
 using System.ComponentModel.Composition.Hosting;
-using System.Diagnostics;
-using System.Linq;
+using System.Configuration;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using BusinessLayer.BusinessTasks.First;
-using BusinessLayer.BusinessTasks.Second;
-using BusinessLayer.Contracts;
 using BusinessLayer.Contracts.First;
 using BusinessLayer.Contracts.Second;
 
@@ -19,7 +11,14 @@ namespace BiryukovTest
     {
         static void Main(string[] args)
         {
-            CompositionContainer container = new BootStrap().GetContainer();
+            string businessLayerFolder = ConfigurationManager.AppSettings["BusinessLayerFolder"];
+            var catalog = new AggregateCatalog();
+            catalog.Catalogs.Add(
+                new AssemblyCatalog(
+                    Assembly.LoadFile(Environment.CurrentDirectory.Replace(@"\BiryukovTest\bin\Debug", string.Empty)
+                                      + businessLayerFolder
+                                      + "/BusinessLayer.BusinessTasks.dll")));
+            CompositionContainer container = new CompositionContainer(catalog);
 
             var typeOfTask = 2;// int.Parse(args[0]);
 
@@ -58,20 +57,6 @@ namespace BiryukovTest
             }
 
             Console.ReadLine();
-        }
-    }
-
-    public class BootStrap
-    {
-        public CompositionContainer GetContainer()
-        {
-            var catalog = new AggregateCatalog();
-            catalog.Catalogs.Add(new AssemblyCatalog(typeof(FirstTaskGuids).Assembly));
-
-            CompositionContainer container = new CompositionContainer(catalog);
-            container.ComposeParts(this);
-
-            return container;
         }
     }
 
