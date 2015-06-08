@@ -39,10 +39,12 @@ namespace BiryukovTest.TaskHelpers
         public void DisplayTaskResults(IBusinessTaskResult taskResult)
         {
             ISecondTaskResult<string> secondTaskResult = (ISecondTaskResult<string>)taskResult;
+            Console.WriteLine("GUIDs:");
             foreach (var item in secondTaskResult.Items)
             {
                 Console.WriteLine(item);
             }
+            Console.WriteLine("Max common strings:");
             foreach (var maxCommonString in secondTaskResult.MaxCommonStrings)
             {
                 Console.WriteLine(maxCommonString);
