@@ -11,13 +11,15 @@ namespace BusinessLayer.BusinessTasks.First
     [PartCreationPolicy(CreationPolicy.NonShared)]
     public class FirstTaskGuids : IFirstTask<Guid, char>
     {
-        public IFirstTaskResult<Guid> Calculate(IFirstTaskArguments<Guid, char> arguments)
+        public IFirstTaskResult<Guid> Calculate(IFirstTaskArguments<char> arguments)
         {
             var template = arguments.TemplateToSearch.GetTemplate();
 
+            var sequenceToReview=
+
             var result = new FirstTaskResultGuids
             {
-                Items = arguments.ItemsToReview.Where(guid => guid.RequirementIsMet(template))
+                Items = arguments.SequenceToReview.ItemsToReview.Where(guid => guid.RequirementIsMet(template))
             };
 
             return result;

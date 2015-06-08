@@ -26,13 +26,22 @@ namespace BiryukovTest
             switch (typeOfTask)
             {
                 case 1:
-                    var amountOfDigits = int.Parse(args[1]);
-                    var desiredAmountOfResults = int.Parse(args[2]);
+                    var amountOfDigits = 3;//int.Parse(args[1]);
+                    var desiredAmountOfResults = 1;//int.Parse(args[2]);
 
-                    var aa = container.GetExportedValue<IFirstTaskArguments<Guid, char>>();
-                    aa.SetFirstTaskArguments(amountOfDigits, '0', desiredAmountOfResults);
+                    var arguments = container.GetExportedValue<IFirstTaskArguments<Guid, char>>();
+                    arguments.SetFirstTaskArguments(amountOfDigits, '0', desiredAmountOfResults);
                     var firstTaskGuids = container.GetExportedValue<IFirstTask<Guid, char>>();
-                    
+                    var result = firstTaskGuids.Calculate(arguments).Items;
+
+                    var actualCount = 0;
+                    foreach (var aa in result)
+                    {
+                        if (actualCount == desiredAmountOfResults) break;
+                        Console.WriteLine(aa);
+                        ++actualCount;
+                    }
+
                     break;
                 case 2:
                     break;

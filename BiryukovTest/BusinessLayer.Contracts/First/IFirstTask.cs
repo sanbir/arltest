@@ -2,8 +2,8 @@
 
 namespace BusinessLayer.Contracts.First
 {
-    public interface IFirstTask<TItemToReview, TSymbol>
-        : IBusinessTask<IFirstTaskArguments<TItemToReview, TSymbol>, IFirstTaskResult<TItemToReview>>
+    public interface IFirstTask<TItemToReview, out TSymbol>
+        : IBusinessTask<IFirstTaskArguments<TSymbol>, IFirstTaskResult<TItemToReview>>
     {
     }
 }

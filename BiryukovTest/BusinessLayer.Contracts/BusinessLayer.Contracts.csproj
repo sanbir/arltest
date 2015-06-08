@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="First\IFirstTaskResult.cs" />
+    <Compile Include="First\SequenceToReview.cs" />
     <Compile Include="First\TemplateToSearch.cs" />
     <Compile Include="IBusinessTask.cs" />
     <Compile Include="First\IFirstTask.cs" />

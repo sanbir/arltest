@@ -6,24 +6,15 @@ using BusinessLayer.Contracts.First;
 
 namespace BusinessLayer.BusinessTasks.First
 {
-    [Export(typeof(IFirstTaskArguments<Guid, char>))]
+    [Export(typeof(IFirstTaskArguments<char>))]
     [PartCreationPolicy(CreationPolicy.NonShared)]
-    public class FirstTaskArgumentsGuidChar : IFirstTaskArguments<Guid, char>
+    public class FirstTaskArgumentsGuidChar : IFirstTaskArguments<char>
     {
         public TemplateToSearch TemplateToSearch { get; set; }
-        public IEnumerable<Guid> ItemsToReview { get; set; }
-        public void SetFirstTaskArguments(int numberOfSymbols, char symbol, int numberOfItemsToReview)
+        public void SetFirstTaskArguments(int numberOfSymbols, char symbol)
         {
             TemplateToSearch = new TemplateToSearch(numberOfSymbols, symbol);
-
-            var itemsToReview = new List<Guid>(numberOfItemsToReview);
-            for (int i = 0; i < numberOfItemsToReview; i++)
-            {
-                itemsToReview.Add(Guid.NewGuid());
-            }
-            ItemsToReview = itemsToReview;
         }
-
     }
 
 }

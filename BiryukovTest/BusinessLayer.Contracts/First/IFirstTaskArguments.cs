@@ -2,12 +2,10 @@ using System.Collections.Generic;
 
 namespace BusinessLayer.Contracts.First
 {
-    public interface IFirstTaskArguments<TItemToReview, TSymbol> : IBusinessTaskArguments
+    public interface IFirstTaskArguments<in TSymbol> : IBusinessTaskArguments
     {
         TemplateToSearch TemplateToSearch { get; set; }
 
-        IEnumerable<TItemToReview> ItemsToReview { get; set; }
-
-        void SetFirstTaskArguments(int numberOfSymbols, TSymbol symbol, int numberOfItemsToReview);
+        void SetFirstTaskArguments(int numberOfSymbols, TSymbol symbol);
     }
 }
